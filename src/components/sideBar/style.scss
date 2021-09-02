@@ -1,0 +1,78 @@
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 0 30px;
+        height: 100vh;
+        justify-content: space-between;
+        width: 80px;
+        background-color: #c3d2f8;
+        &-top {
+        }
+        &-center {
+            .list-icon {
+                display: flex;
+                flex-direction: column;
+                li {
+                    position: relative;
+                    p {
+                        position: absolute;
+                        left: -20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                     
+                    }
+                    .active p {
+                        width: 3px;
+                        border-radius: 15px;
+                        background-color:#51459d;
+                        height: 45px;
+                    }
+                }
+                .active .icon-bar {
+                    background-color: #51459b;
+                    svg {
+                        color: #f9fafe;
+                    }
+                }
+                .icon-bar {
+                    margin: 17px 0;
+                }
+            }
+
+        }
+        &-bottom {
+            .icon-bar {
+                background-color: transparent !important;
+            }
+        }
+        .icon-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 12px;
+            background-color: #f9fafe;
+            transition:all .1s ease-out;
+            svg {
+                color: #51459b;
+            }
+        }
+        .icon-bar-active {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            background-color: #51459d;
+            svg {
+                color: #f9fafe;
+            }
+        }
+    }
+}

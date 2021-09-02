@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+button,a,li {
+    cursor: pointer;
+    list-style: none;
+}
+body {
+    background-color: #f2f8ff;
+}
+
+.team {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
