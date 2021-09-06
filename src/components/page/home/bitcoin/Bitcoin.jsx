@@ -18,7 +18,7 @@ function Bitcoin() {
     return (
         <>
          <p className={ coin > lastPrice ? 'up'  : 'down' }> 
-            {coin} BTC / USDT
+            {coin} $ BTC / USDT
          </p> 
       </>
     )
