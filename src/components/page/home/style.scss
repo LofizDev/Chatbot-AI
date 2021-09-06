@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+h2 {
+    font-family: 'Comfortaa', cursive;
+}
+
+.home {
+    padding: 0 0 82px 80px ;
+    height: 100vh;
+    .container {
+        padding: 40px 30px;
+        display: flex;
+        &-left {
+            width: 60%;
+            .left-top-box {
+                display: flex;
+                margin-top: 50px;
+                .card {
+                    border-radius: 13px;
+                    margin-right: 20px;
+                    padding: 36px 17px ;
+                    background-color: #ffffff;
+                    &-header {
+                        height: 35px;
+                        width: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                    }
+                    .news-icon {
+                        color: #534999;
+                        background-color: #efefff;
+                    }
+                    .back-icon {
+                        background-color: #f0fff3;
+                        color: #209655;
+                    }
+                    .weather-icon {
+                        background-color: #f3fbff;
+                        color: #5577c9;
+                    }
+                    .bitcoin-icon {
+                        background-color: #fff4f1;
+                        color: #e4a291;
+                    }
+                    &-title {
+                        font-size: 16px;
+                        margin-top: 25px;
+                        color: #424242;
+                        font-weight: 400;
+                    }
+                    &-text {
+                        color: rgb(44, 44, 44);
+                        margin-top: 20px;
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    
+        &-right {
+            width: 40%;
+        }
+    }
+}

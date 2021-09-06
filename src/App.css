@@ -18,3 +18,9 @@ body {
     justify-content: center;
     font-size: 3rem;
 }
+.up {
+    color: green;
+}
+.down {
+    color: red;
+}
