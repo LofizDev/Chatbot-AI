@@ -1,0 +1,80 @@
+.sibar-weather {
+    padding-left: 30px;
+    .box-detail {
+        margin-top: 70px;
+        background-size: cover;
+        background-position: bottom;
+        transition: 0.4s ease-out;
+        height: 75vh;
+        width: 82%;
+        border-radius: 10px;
+        .search-box {
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 30px;
+            .search-bar {
+                width: 100%;
+                padding: 15px;
+                border: 0;
+                outline: 0;
+                display: block;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 0 0 16px 16px;
+                box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+                color: #313131;
+                font-size: 17px;
+                transition: 0.4s ease;
+                &:focus {
+                    background-color: rgba(255, 255, 255, 0.75);
+                }
+            }
+        }
+    }
+    .location {
+        color: #fff;
+        font-size: 27px;
+        font-weight: 500;
+        margin-top: 50px;
+        text-align: center;
+        text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+    }
+    .date {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 10px;
+        text-align: center;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    }
+    .weather-box {
+        text-align: center;
+        .temp {
+            position: relative;
+            display: inline-block;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px 60px;
+            color: #fff;
+            font-size: 80px;
+            font-weight: 900;
+            text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+            text-align: center;
+            box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        .weather {
+            color: #FFF;
+            font-size: 38px;
+            font-weight: 700;
+            text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+        }
+    }
+}
+#vl {
+    background-image: url('https://images.pexels.com/photos/1755683/pexels-photo-1755683.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+}
+#xx {
+    background-image: url('https://images.pexels.com/photos/3596708/pexels-photo-3596708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+
+}

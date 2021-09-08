@@ -7,7 +7,7 @@ import Today from './dateToday/Today'
 import Bitcoin from './bitcoin/Bitcoin'
 import News from './news/News'
 import Weather from './weather/Weather'
-
+import BoxInfo from './weather/BoxInfo/BoxInfo'
 function Home() {
 
     // Get value from Voice and Render Component
@@ -21,7 +21,7 @@ function Home() {
             onCommand: ({ command }) => {
                 switch (command) {
                     case 'Bitcoin': return setVoiceData(<Bitcoin />) 
-                    case 'Weather': return setVoiceData(<Weather/>)
+                    case 'Weather': return setVoiceData(<Weather/> || <BoxInfo/>)
                     case 'News':    return setVoiceData(<News/>)
                     case 'GoBack':  return setVoiceData(<Bitcoin/>)
                     default:               setVoiceData(<Bitcoin/>)
@@ -29,11 +29,6 @@ function Home() {
             }
         })
     }, [])
-
-
-
-
-    console.log('let it stated', voiceData);
 
     return (
         <h2 className='home'>
@@ -73,7 +68,7 @@ function Home() {
                                 <Card.Body>
                                     <Card.Title>News</Card.Title>
                                     <Card.Text>
-                                        Try saying : News Today
+                                        Try saying : <br /> News Today
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -96,10 +91,8 @@ function Home() {
                     </div>
                 </div>
                 <div className="container-right">
-                    <div className="right-title">
-                        <h5> Today,<Today /></h5>
-                    </div>
                     <div className="info-box">
+                        {voiceData.type === Weather && <BoxInfo/>}
                     </div>
                 </div>
             </div>

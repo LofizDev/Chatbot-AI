@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +10,11 @@ button,a,li {
 }
 body {
     background-color: #f2f8ff;
+    font-family: 'Comfortaa', cursive;
 }
-
+p {
+    font-weight: 400;
+}
 .team {
     display: flex;
     height: 90vh;

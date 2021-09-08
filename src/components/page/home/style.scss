@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-h2 {
-    font-family: 'Comfortaa', cursive;
-}
+
 
 .home {
     padding: 0 0 82px 80px ;
@@ -10,14 +7,14 @@ h2 {
         padding: 40px 30px;
         display: flex;
         &-left {
-            width: 60%;
+            width: 65%;
             .left-top-box {
                 display: flex;
                 margin-top: 50px;
                 .card {
-                    border-radius: 13px;
+                    border-radius: 14px;
                     margin-right: 20px;
-                    padding: 36px 17px ;
+                    padding: 37px 20px ;
                     background-color: #ffffff;
                     &-header {
                         height: 35px;
@@ -50,16 +47,17 @@ h2 {
                         font-weight: 400;
                     }
                     &-text {
-                        color: rgb(44, 44, 44);
+                        color: rgb(61, 59, 59);
                         margin-top: 20px;
                         font-size: 19px;
+                        font-weight: 600;
                     }
                 }
             }
         }
     
         &-right {
-            width: 40%;
+            width: 35%;
         }
     }
 }
