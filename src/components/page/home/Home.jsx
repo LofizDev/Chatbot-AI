@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
-import { ArrowClockwise, CloudSun, CurrencyBitcoin, Newspaper } from 'react-bootstrap-icons'
+import {  CloudSun, CurrencyBitcoin, MusicNoteBeamed, Newspaper } from 'react-bootstrap-icons'
 import './style.scss'
 import alanBtn from '@alan-ai/alan-sdk-web'
 import Today from './dateToday/Today'
@@ -74,10 +74,10 @@ function Home() {
                             </Card>
                             <Card className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='back-icon'>
-                                    <ArrowClockwise size={19} />
+                                    <MusicNoteBeamed size={19} />
                                 </Card.Header>
                                 <Card.Body>
-                                    <Card.Title>Go Back</Card.Title>
+                                    <Card.Title>Music</Card.Title>
                                     <Card.Text>
                                         Try saying : <br /> Go Back
                                     </Card.Text>

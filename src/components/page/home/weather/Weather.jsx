@@ -1,25 +1,9 @@
-import React,{useState,useEffect} from 'react'
 
 function Weather() {
-    const [saigon,setSaigon] = useState([])
 
-    const apiKey = 'acc4a289ac1bba6d85927937c13007e3'
-    useEffect(() => {
-        const getWeatherSaiGon = async () => {
-          await  fetch(`https://api.openweathermap.org/data/2.5/weather?q=ho chi minh&appid=${apiKey}&units=metric&lang=vi`)
-            .then((res) => res.json())
-            .then((data) => {
-                const saigon = data
-                setSaigon(saigon)
-                console.log(saigon);
-            })
-        }
-        getWeatherSaiGon()
-     
-    },[])
     return (
-        <div className='weather-box'>
-            <p>Thành phố Hồ Chí Minh</p>
+        <div className='windy-box'>
+         <iframe width="100%" height="100%" style={{borderRadius:'13px'}} src="https://embed.windy.com/embed2.html?lat=16.257&lon=107.622&detailLat=15.579&detailLon=128.142&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>
         </div>
     )
 }

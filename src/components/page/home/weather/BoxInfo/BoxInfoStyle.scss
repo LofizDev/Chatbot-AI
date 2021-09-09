@@ -5,8 +5,8 @@
         background-size: cover;
         background-position: bottom;
         transition: 0.4s ease-out;
-        height: 75vh;
-        width: 82%;
+        height: 77vh;
+        width: 84%;
         border-radius: 10px;
         .search-box {
             width: 85%;
@@ -75,6 +75,17 @@
     background-image: url('https://images.pexels.com/photos/1755683/pexels-photo-1755683.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 }
 #xx {
-    background-image: url('https://images.pexels.com/photos/3596708/pexels-photo-3596708.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://images.pexels.com/photos/4951280/pexels-photo-4951280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 
+}
+.windy-box {
+    margin-right: 20px;
+    height: 50vh;
+    padding-top: 20px;
+}
+@media screen and(min-width:1700px) {
+    .windy-box {
+        height: 54vh;
+        margin-top: 25px;
+    }   
 }
