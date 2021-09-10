@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
-import {  CloudSun, CurrencyBitcoin, MusicNoteBeamed, Newspaper } from 'react-bootstrap-icons'
+import { CloudSun, CurrencyBitcoin, MusicNoteBeamed, Newspaper } from 'react-bootstrap-icons'
 import './style.scss'
 import alanBtn from '@alan-ai/alan-sdk-web'
-import Today from './dateToday/Today'
 import Bitcoin from './bitcoin/Bitcoin'
 import News from './news/News'
 import Weather from './weather/Weather'
 import BoxInfo from './weather/BoxInfo/BoxInfo'
+import Music from './music/Music'
+import NewBox from './news/newsBox/NewBox'
+
 function Home() {
 
     // Get value from Voice and Render Component
-    const [voiceData, setVoiceData] = useState(<Bitcoin/>)
+    const [voiceData, setVoiceData] = useState(<Bitcoin />)
 
     // Voice Button
     const alanKey = '256491ed94562d19695c224ec956c2032e956eca572e1d8b807a3e2338fdd0dc/stage'
@@ -20,26 +22,28 @@ function Home() {
             key: alanKey,
             onCommand: ({ command }) => {
                 switch (command) {
-                    case 'Bitcoin': return setVoiceData(<Bitcoin />) 
-                    case 'Weather': return setVoiceData(<Weather/> || <BoxInfo/>)
-                    case 'News':    return setVoiceData(<News/>)
-                    case 'GoBack':  return setVoiceData(<Bitcoin/>)
-                    default:               setVoiceData(<Bitcoin/>)
+                    case 'Bitcoin': return setVoiceData(<Bitcoin />)
+                    case 'Weather': return setVoiceData(<Weather /> || <BoxInfo />)
+                    case 'News': return setVoiceData(<News /> || <NewBox/>)
+                    case 'GoBack': return setVoiceData(<Music />)
+                    default: setVoiceData(<Bitcoin />)
                 }
             }
         })
     }, [])
 
+
     return (
-        <h2 className='home'>
-            <div className="container">
-                <div className="container-left">
-                    <div className="container-left-top">
+        <h2 className='homee'>
+            <div className="containerr">
+                <div className="containerr-left">
+                    <div className="containerr-left-top">
                         <div className="left-top-title">
                             <h5>Voice Asistant</h5>
                         </div>
                         <div className="left-top-box">
-                            <Card className='card-item' style={{ width: '18rem' }}>
+                            <Card onClick={() => setVoiceData(<Bitcoin />)}
+                                className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='bitcoin-icon'>
                                     <CurrencyBitcoin size={19} />
                                 </Card.Header>
@@ -50,7 +54,8 @@ function Home() {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            <Card className='card-item' style={{ width: '18rem' }}>
+                            <Card onClick={() => setVoiceData(<Weather /> || <BoxInfo />)}
+                                className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='weather-icon'>
                                     <CloudSun size={19} />
                                 </Card.Header>
@@ -61,7 +66,8 @@ function Home() {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            <Card className='card-item' style={{ width: '18rem' }}>
+                            <Card onClick={() => setVoiceData(<News />)}
+                                className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='news-icon'>
                                     <Newspaper size={19} />
                                 </Card.Header>
@@ -72,27 +78,29 @@ function Home() {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            <Card className='card-item' style={{ width: '18rem' }}>
+                            <Card onClick={() => setVoiceData(<Music />)}
+                                className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='back-icon'>
                                     <MusicNoteBeamed size={19} />
                                 </Card.Header>
                                 <Card.Body>
-                                    <Card.Title>Music</Card.Title>
+                                    <Card.Title>Spotify</Card.Title>
                                     <Card.Text>
-                                        Try saying : <br /> Go Back
+                                        Try saying :  Music
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </div>
                     </div>
                     {/* Chart left box */}
-                    <div className="container-left-bot">
+                    <div className="containerr-left-bot">
                         {voiceData}
                     </div>
                 </div>
-                <div className="container-right">
+                <div className="containerr-right">
                     <div className="info-box">
-                        {voiceData.type === Weather && <BoxInfo/>}
+                        {voiceData.type === Weather && <BoxInfo />}
+                        {voiceData.type === News && <NewBox/> }
                     </div>
                 </div>
             </div>

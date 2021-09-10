@@ -5,7 +5,7 @@
         background-size: cover;
         background-position: bottom;
         transition: 0.4s ease-out;
-        height: 77vh;
+        height: 80vh;
         width: 84%;
         border-radius: 10px;
         .search-box {
@@ -80,12 +80,12 @@
 }
 .windy-box {
     margin-right: 20px;
-    height: 50vh;
-    padding-top: 20px;
+    height: 54vh;
+    padding-top: 25px;
 }
 @media screen and(min-width:1700px) {
     .windy-box {
-        height: 54vh;
+        height: 57vh;
         margin-top: 25px;
     }   
 }

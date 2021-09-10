@@ -1,27 +1,25 @@
-
-.home {
-    padding: 0 0 82px 80px ;
+.homee {
+    padding: 0 0 82px 80px;
     height: 100vh;
-    .container {
+    .containerr {
         padding: 35px 30px;
         display: flex;
         &-left {
             width: 65%;
             .left-top-box {
                 display: flex;
-                margin-top: 50px;
+                margin-top: 45px;
                 .card {
                     border-radius: 14px;
                     margin-right: 20px;
-                    padding: 30px 20px ;
+                    cursor: pointer;
+                    padding: 30px 20px;
+                    border: 0;
                     background-color: #ffffff;
                     &-header {
                         height: 35px;
-                        width: 35px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50%;
+                        width: 35px !important;
+                        border-radius: 50% !important;
                     }
                     .news-icon {
                         color: #534999;
@@ -54,9 +52,77 @@
                 }
             }
         }
-    
+
         &-right {
             width: 35%;
         }
     }
+}
+@media screen and(max-width:1300px) {
+    .containerr {
+        padding: 35px 20px;
+        flex-direction: column;
+        &-left {
+            padding-left: 20px;
+            width: 100% !important;
+        }
+        &-right {
+            width: auto !important;
+        }
+    }
+}
+@media screen and(max-width:900px) {
+    .left-top-box {
+        flex-wrap: wrap;
+        .card {
+            margin-bottom: 10px;
+            width: calc(50% - 20px) !important;
+        }
+        .card-text {
+            font-weight: 400 ;
+            font-size: 13px !important;
+            margin-top: 0 !important;
+        }
+        .card-title {
+            margin-top: 10px !important;
+        }
+    }
+        .box-detail {
+            margin-left: 20px;
+            width: 90% !important;
+        }
+        .sidebar {
+            display: none;
+        }
+        .sibar-weather {
+            padding-left: 0 !important;
+        }
+        .homee {
+            padding: 0 !important;
+        }
+        .containerr {
+            padding:30px 0 !important;
+        }
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border: 0 !important;
+}
+// Custom scrollbar
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset #a6afe0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    height: 50px;
+    -webkit-box-shadow: inset 0px 0px 6px rgba(160, 200, 241, 0.5);
+}
+::-webkit-scrollbar {
+    width: 8px;
 }

@@ -6,11 +6,12 @@
 }
 button,a,li {
     cursor: pointer;
+    font-weight: 400;
     list-style: none;
 }
 body {
-    background-color: #f2f8ff;
-    font-family: 'Comfortaa', cursive;
+    background-color: #f2f8ff !important;
+    font-family: 'Comfortaa', cursive !important;
 }
 p {
     font-weight: 400;
@@ -21,10 +22,4 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-}
-.up {
-    color: green;
-}
-.down {
-    color: red;
 }

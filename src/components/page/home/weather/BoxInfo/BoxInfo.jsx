@@ -36,7 +36,8 @@ function BoxInfo() {
         <div className='sibar-weather'>
             <div className="box-detail"
             id={(typeof weather.main !='undefined' 
-                  ? ((weather.main.temp < 25) ? 'vl' : 'xx') : 'xx')}
+                  ? ((weather.main.temp < 25) ? 'vl' : 'xx')
+                  : 'xx')}
             >
                 <div className="search-box">
                     <input type="text" 
