@@ -32,11 +32,10 @@ function Home() {
         })
     }, [])
 
-
     return (
         <h2 className='homee'>
             <div className="containerr">
-                <div className="containerr-left">
+                <div id={voiceData.type === News ? 'expand' : ''} className="containerr-left">
                     <div className="containerr-left-top">
                         <div className="left-top-title">
                             <h5>Voice Asistant</h5>
@@ -97,7 +96,7 @@ function Home() {
                         {voiceData}
                     </div>
                 </div>
-                <div className="containerr-right">
+                <div id={voiceData.type === News ? 'hide-sidebar' : ''} className="containerr-right">
                     <div className="info-box">
                         {voiceData.type === Weather && <BoxInfo />}
                         {voiceData.type === News && <NewBox/> }

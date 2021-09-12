@@ -1,0 +1,78 @@
+.news-sidebar {
+    background-color: #F2F8FF;
+    .card-title {
+        color: #222222;
+        font-size: 22px;
+        font-weight: 700;
+        padding-right:0px;
+        margin-bottom: 5px;
+        line-height: 24px;
+    }
+    .news-img {
+        padding-right: 8px !important;
+        background-color: #F2F8FF;
+    }
+    .news-content {
+        padding-left: 8px !important;
+        background-color: #F2F8FF;
+
+    }
+    .card-text {
+        font-size: 18px;
+        line-height: 19.6px;
+    }
+    .card {
+        cursor: pointer;
+    }
+}
+// Box showcases
+.show__cases-covid {
+    margin-top: 68px;
+    padding: 0 25px;
+    .red {
+        color: #FF392B;
+        font-size: 19px;
+    }
+    .green {
+        font-size: 19px;
+        color: #00945E;
+    }
+    .box-cases {
+        padding: 19px 20px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: #fff;
+        padding-bottom: 30px;
+    }
+    .box-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-title {
+        margin-bottom: 15px;
+        font-size: 19px;
+        font-weight: bold;
+        text-align: start;
+    }
+    .time-cases {
+        margin-bottom: 12px;
+    }
+    .total-cases,.recovered-cases,.death-cases {
+        display: flex;
+        justify-content: space-between;
+    }
+    span {
+        font-size: 17px;
+        text-align: end;
+        width: 33.3%;
+        margin: 4px 0;
+    }
+    .title-th {
+        text-align: start;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+.highcharts-title,.highcharts-credits{
+    display: none ;
+}
