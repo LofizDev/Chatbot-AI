@@ -16,6 +16,7 @@ function NewBox() {
         })
     }, [])
 
+
     return (
         <div className="show__cases-covid">
             <div className="box-cases">
@@ -29,19 +30,19 @@ function NewBox() {
                     <div className="total-cases">
                         <span className='title-th'>Nhiễm *</span>
                         <span className='red'>
-                            <strong>{vietNamCases?.slice(-1)[0]?.daily}</strong>
+                            <strong>{vietNamCases?.slice(-1)[0]?.daily.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</strong>
                         </span>
-                        <span className='red'>{vietNamCases?.slice(-1)[0]?.total}</span>
+                        <span className='red'>{vietNamCases?.slice(-1)[0]?.total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span>
                     </div>
                     <div className="recovered-cases">
                         <span className='title-th'>Khỏi</span>
-                        <span className='green'><strong>{vietNamCases?.slice(-1)[0]?.recover}</strong></span>
-                        <span className='green'>{vietNamCases?.slice(-1)[0]?.['total-recover']}</span>
+                        <span className='green'><strong>{vietNamCases?.slice(-1)[0]?.recover.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</strong></span>
+                        <span className='green'>{vietNamCases?.slice(-1)[0]?.['total-recover'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span>
                     </div>
                     <div className="death-cases">
                         <span className='title-th'>Tử vong</span>
                         <span><strong>{vietNamCases?.slice(-1)[0]?.dead}</strong></span>
-                        <span>{vietNamCases?.slice(-1)[0]?.['total-dead']}</span>
+                        <span>{vietNamCases?.slice(-1)[0]?.['total-dead'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</span>
                     </div>
                 </div>
             </div>

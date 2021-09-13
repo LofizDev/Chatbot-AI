@@ -23,3 +23,6 @@ p {
     justify-content: center;
     font-size: 3rem;
 }
+.highcharts-root {
+    font-family: sans-serif !important;
+}
