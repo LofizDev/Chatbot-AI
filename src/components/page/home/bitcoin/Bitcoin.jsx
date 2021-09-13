@@ -13,7 +13,9 @@ function Bitcoin() {
             setCoin(data)
             setLastPrice(coin)
         }
-     
+        return (() => {
+            ws.removeEventListener('onmessage',ws)
+        })
     }, [coin])
     return (
         <>

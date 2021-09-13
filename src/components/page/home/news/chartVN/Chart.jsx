@@ -41,7 +41,6 @@ const initOptions = {
 const Chart = () => {
   const [mapData, setMapData] = useState({});
   const [data, setData] = useState([])
-  const [map, setMap] = useState({})
 
   const getMapData = () =>
     import(`@highcharts/map-collection/countries/vn/vn-all.geo.json`);
@@ -53,12 +52,15 @@ const Chart = () => {
       setMapData(res);
     };
     getData();
-  }, []);
-  const [options, setOptions] = useState({});
+   }, []);
+
+
+
+   const [options, setOptions] = useState({});
 
 
   useEffect(() => {
-    if ( Object.keys(mapData).length) {
+    if (mapData && Object.keys(mapData).length) {
       fetch('https://api.zingnews.vn/public/v2/corona/getChart?type=province')
         .then(res => res.json())
         .then(data => {
@@ -72,8 +74,8 @@ const Chart = () => {
 
       const newData = keyMap.map((key, index) => {
         return {
-          value: valueMap[index],
           key: key,
+          value: valueMap[index]
         }
       });
 
@@ -87,7 +89,7 @@ const Chart = () => {
   return (
     <HighchartsReact
       highcharts={Highcharts}
-      options={options}
+       options={options}
       constructorType={"mapChart"}
     />
   )
