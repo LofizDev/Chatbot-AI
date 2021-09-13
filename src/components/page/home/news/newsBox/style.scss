@@ -1,28 +1,59 @@
 .news-sidebar {
     background-color: #F2F8FF;
+    padding: 0 10px;
     .card-title {
         color: #222222;
         font-size: 22px;
         font-weight: 700;
         padding-right:0px;
-        margin-bottom: 5px;
+        margin-bottom: 12px;
+        font-weight: 500;
+        margin-top: 5px;
         line-height: 24px;
     }
     .news-img {
         padding-right: 8px !important;
         background-color: #F2F8FF;
+        img {
+            width: 96%;
+            height: 145px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+    .src-news {
+        font-size: 15px;
+        color: #9ca3af;
+        font-weight: 400;
+    }
+    .time-news {
+        color: #6b7280;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-top: 2px;
     }
     .news-content {
         padding-left: 8px !important;
         background-color: #F2F8FF;
-
     }
+
     .card-text {
-        font-size: 18px;
-        line-height: 19.6px;
+        margin-top: 10px;
+        font-size: 19px;
+        line-height: 23.6px;
+        font-weight: 400;
     }
     .card {
         cursor: pointer;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 30px !important;
+        padding-right: 20px;
+        background-color: transparent;
+    }
+    .card-fotterr {
+        position: absolute;
+        bottom: -4px;
     }
 }
 // Box showcases
@@ -75,4 +106,18 @@
 }
 .highcharts-title,.highcharts-credits{
     display: none ;
+}
+
+@media screen and(max-width : 700px) {
+    .news-sidebar {
+        .news-img img {
+            height: 240px !important;
+        } 
+        .card-title {
+            margin-top: 30px !important;
+        }
+        .card-body {
+            margin-bottom: 50px;
+        }
+    }
 }
