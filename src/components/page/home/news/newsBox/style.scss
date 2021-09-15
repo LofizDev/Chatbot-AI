@@ -37,7 +37,6 @@
         padding-left: 8px !important;
         background-color: #F2F8FF;
     }
-
     .card-text {
         margin-top: 10px;
         font-size: 19px;
@@ -53,7 +52,7 @@
     }
     .card-fotterr {
         position: absolute;
-        bottom: -4px;
+        bottom: -15px;
     }
 }
 // Box showcases
@@ -119,5 +118,11 @@
         .card-body {
             margin-bottom: 50px;
         }
-    }
+        .card-fotterr {
+            bottom: 0;
+        }
+        .news-img {
+            padding-right: 0px !important;
+        }
+}
 }

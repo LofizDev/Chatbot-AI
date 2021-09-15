@@ -9,6 +9,10 @@ button,a,li {
     font-weight: 400;
     list-style: none;
 }
+a {
+   text-decoration: none !important;
+   color: rgb(44, 43, 43) !important;
+}
 body {
     background-color: #f2f8ff !important;
     font-family: 'Comfortaa', cursive !important;
