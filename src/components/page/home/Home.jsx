@@ -9,6 +9,8 @@ import Weather from './weather/Weather'
 import BoxInfo from './weather/BoxInfo/BoxInfo'
 import Music from './music/Music'
 import NewBox from './news/newsBox/NewBox'
+import {scrollToBottom,scrollToTop} from '../../utils/voiceScrolling'
+import TableTrade from './bitcoin/tableTrade/TableTrade'
 
 function Home() {
 
@@ -22,15 +24,18 @@ function Home() {
             key: alanKey,
             onCommand: ({ command }) => {
                 switch (command) {
-                    case 'Bitcoin': return setVoiceData(<Bitcoin />)
+                    case 'Bitcoin': return setVoiceData(<Bitcoin /> || <TableTrade/>)
                     case 'Weather': return setVoiceData(<Weather /> || <BoxInfo />)
                     case 'News': return setVoiceData(<News /> || <NewBox/>)
-                    case 'GoBack': return setVoiceData(<Music />)
+                    case 'Music': return setVoiceData(<Music />) 
+                    case 'bottom': return scrollToBottom()
+                    case 'top': return scrollToTop()
                     default: setVoiceData(<Bitcoin />)
                 }
             }
         })
     }, [])
+   
 
     return (
         <h2 className='homee'>
@@ -100,6 +105,7 @@ function Home() {
                     <div className="info-box">
                         {voiceData.type === Weather && <BoxInfo />}
                         {voiceData.type === News && <NewBox/> }
+                        {voiceData.type === Bitcoin && <TableTrade/> }
                     </div>
                 </div>
             </div>

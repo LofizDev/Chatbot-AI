@@ -1,6 +1,107 @@
-.up {
-    color: green;
+.table-trade {
+    margin-top: 70px;
+    background-color: #fff;
+    border-radius: 14px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-left: 25px;
+
+    .coin-name {
+        display: flex;
+        padding-top: 15px;
+        font-size: 19px;
+        font-weight: bold;
+        p {
+            color: rgb(112, 122, 138);
+            width: 33.33%;
+            font-size: 15px;
+        }
+        #total-coin,
+        #quantity-coin {
+            text-align: start;
+        }
+        #total-coin {
+            padding-left: 20px;
+        }
+    }
+    .coin-detail {
+        .coin {
+            display: flex;
+            padding-top: 3px;
+            cursor: pointer;
+            position: relative;
+            &:hover .overlay {
+                opacity: 1;
+            }
+            h6 {
+                width: 33.33%;
+            }
+            .qtt-coin,
+            .tt-coin {
+                text-align: start;
+                font-family: sans-serif;
+                color: rgb(71, 77, 87);
+            }
+            .pri-coin {
+                color: rgb(207, 48, 74);
+            }
+            .up {
+                color: rgb(3, 166, 109);
+            }
+            .down {
+                color: rgb(207, 48, 74);
+            }
+            .equal {
+                color: rgb(41, 40, 40);
+            }
+            .qtt-coin {
+                text-align: end;
+                padding-right: 25px;
+            }
+            .tt-coin {
+                padding-left: 25px;
+            }
+        }
+    }
 }
-.down {
-    color: red;
+
+.overlay {
+    position: absolute;
+    right: calc(100% + 1.5rem); 
+    opacity: 0;
+    height: fit-content;
+    box-shadow: rgb(0 0 0 / 8%) 0px 0px 8px, rgb(0 0 0 / 8%) 0px 4px 8px;
+    padding: 8px;
+    top: 0px;
+    color: #fff;
+    background-color: rgb(94, 102, 115);
+    border-radius: 4px;
+    &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        background-color: rgb(94, 102, 115);
+        right: -3.5px;
+        top: 50%;
+        transform: translatey(-50%) rotate(45deg);
+        border-radius: 2px;
+      }
+    .overlay-item {
+        display: flex;
+        font-family: sans-serif;
+        padding: 5px;
+        font-size: 15px;
+        width: 230px;
+        justify-content: space-between;
+    }  
+}
+
+@media screen and(max-width:1200px) {
+    .overlay {
+        display: none;
+    }
+    
 }

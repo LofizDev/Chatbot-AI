@@ -1,12 +1,15 @@
 import alanBtn from '@alan-ai/alan-sdk-web'
 import React, { useState, useEffect } from 'react'
 import { timeSince } from './timeSince/TimeFormatter'
+import { scrollToTop ,scrollToBottom} from '../../../utils/voiceScrolling'
+
 function News() {
     const [newsData, setNewsData] = useState([])
     const [loading, setLoading] = useState(false)
     const [page,setPage] = useState(5)
     const [loadMore,setLoadMore] = useState(page)
 
+    // call the news from Vnexpress
     useEffect(() => {
         setLoading(true)
         const getNews = async () => {
@@ -20,6 +23,27 @@ function News() {
             }
             getNews()
         }, [loadMore])
+
+    // Voice AlanAI, Scroll top,Scroll Down,Loadmore
+       // Voice Button
+       const alanKey = '256491ed94562d19695c224ec956c2032e956eca572e1d8b807a3e2338fdd0dc/stage'
+       useEffect(() => {
+           alanBtn({
+               key: alanKey,
+               onCommand: ({ command }) => {
+                   switch (command) {
+                       case 'bottom': return scrollToBottom()
+                       case 'top': return scrollToTop()
+                       case 'One more time': return handleLoadMore()
+                   }
+               }
+           })
+       }, [])
+
+    // Handl Load more voice 
+    function handleLoadMore() {
+        setLoadMore(loadMore +5)
+    }
 
 
     if (loading === true) return <h2>loading</h2>
