@@ -1,6 +1,7 @@
 .news-sidebar {
     background-color: #F2F8FF;
     padding: 0 10px;
+    margin-top: 45px !important;
     .card-title {
         color: #222222;
         font-size: 22px;
@@ -57,7 +58,7 @@
 }
 // Box showcases
 .show__cases-covid {
-    margin-top: 68px;
+    margin-top: 20px;
     padding: 0 25px;
     .red {
         color: #FF392B;
@@ -111,6 +112,7 @@
     .news-sidebar {
         .news-img img {
             height: 240px !important;
+            width: 100%;
         } 
         .card-title {
             margin-top: 30px !important;

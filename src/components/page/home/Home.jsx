@@ -3,50 +3,52 @@ import { Card } from 'react-bootstrap'
 import { CloudSun, CurrencyBitcoin, MusicNoteBeamed, Newspaper } from 'react-bootstrap-icons'
 import './style.scss'
 import alanBtn from '@alan-ai/alan-sdk-web'
-import Bitcoin from './bitcoin/Bitcoin'
 import News from './news/News'
 import Weather from './weather/Weather'
 import BoxInfo from './weather/BoxInfo/BoxInfo'
 import Music from './music/Music'
 import NewBox from './news/newsBox/NewBox'
-import {scrollToBottom,scrollToTop} from '../../utils/voiceScrolling'
+import {scrollToBottom,scrollToTop} from '../../../utils/VoiceScrolling'
 import TableTrade from './bitcoin/tableTrade/TableTrade'
+import TableCoin from './bitcoin/TableCoin'
+import { ALAN_KEY } from '../../../utils/Api'
 
 function Home() {
 
     // Get value from Voice and Render Component
-    const [voiceData, setVoiceData] = useState(<Bitcoin />)
-
+    const [voiceData, setVoiceData] = useState(<TableCoin />)
+    const [count,setCount] = useState([])
     // Voice Button
-    const alanKey = '256491ed94562d19695c224ec956c2032e956eca572e1d8b807a3e2338fdd0dc/stage'
+    const alanKey = ALAN_KEY
     useEffect(() => {
         alanBtn({
             key: alanKey,
             onCommand: ({ command }) => {
                 switch (command) {
-                    case 'Bitcoin': return setVoiceData(<Bitcoin /> || <TableTrade/>)
+                    case 'Bitcoin': return setVoiceData(<TableCoin /> || <TableTrade />)
                     case 'Weather': return setVoiceData(<Weather /> || <BoxInfo />)
                     case 'News': return setVoiceData(<News /> || <NewBox/>)
                     case 'Music': return setVoiceData(<Music />) 
                     case 'bottom': return scrollToBottom()
                     case 'top': return scrollToTop()
-                    default: setVoiceData(<Bitcoin />)
+                    default: setVoiceData(<TableCoin />)
                 }
             }
         })
     }, [])
-   
 
+ 
+    
     return (
         <h2 className='homee'>
             <div className="containerr">
                 <div id={voiceData.type === News ? 'expand' : ''} className="containerr-left">
                     <div className="containerr-left-top">
-                        <div className="left-top-title">
-                            <h5>Voice Asistant</h5>
-                        </div>
+                        {/* <div className="left-top-title">
+                            <h5>Voice Asistant {count}</h5>
+                        </div> */}
                         <div className="left-top-box">
-                            <Card onClick={() => setVoiceData(<Bitcoin />)}
+                            <Card onClick={() => setVoiceData(<TableCoin />)}
                                 className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='bitcoin-icon'>
                                     <CurrencyBitcoin size={19} />
@@ -105,7 +107,7 @@ function Home() {
                     <div className="info-box">
                         {voiceData.type === Weather && <BoxInfo />}
                         {voiceData.type === News && <NewBox/> }
-                        {voiceData.type === Bitcoin && <TableTrade/> }
+                        {voiceData.type === TableCoin && <TableTrade changeCount={count => setCount(count)} count={count} /> }
                     </div>
                 </div>
             </div>

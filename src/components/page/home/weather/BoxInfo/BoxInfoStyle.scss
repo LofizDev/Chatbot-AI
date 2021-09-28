@@ -1,11 +1,11 @@
 .sibar-weather {
     padding-left: 30px;
     .box-detail {
-        margin-top: 70px;
+        margin-top: 20px;
         background-size: cover;
         background-position: bottom;
         transition: 0.4s ease-out;
-        height: 80vh;
+        height: 87vh;
         width: 84%;
         border-radius: 10px;
         .search-box {
@@ -80,12 +80,12 @@
 }
 .windy-box {
     margin-right: 20px;
-    height: 54vh;
-    padding-top: 25px;
+    height: 60vh;
+    padding-top: 30px;
 }
 @media screen and(min-width:1700px) {
     .windy-box {
-        height: 57vh;
+        height: 64vh;
         margin-top: 25px;
     }   
 }

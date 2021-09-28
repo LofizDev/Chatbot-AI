@@ -1,15 +1,14 @@
 .table-trade {
-    margin-top: 70px;
+    margin-top: 20px;
     background-color: #fff;
     border-radius: 14px;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 30px;
     margin-left: 25px;
-
     .coin-name {
         display: flex;
-        padding-top: 15px;
+        padding-top: 30px;
         font-size: 19px;
         font-weight: bold;
         p {
@@ -28,14 +27,12 @@
     .coin-detail {
         .coin {
             display: flex;
-            padding-top: 3px;
             cursor: pointer;
             position: relative;
-            &:hover .overlay {
-                opacity: 1;
-            }
             h6 {
                 width: 33.33%;
+                padding: 8px 0;
+                margin-bottom: 0;
             }
             .qtt-coin,
             .tt-coin {
@@ -65,7 +62,62 @@
         }
     }
 }
+// Table list coin 
 
+.table-listcoin {
+    width: 98%;
+    background-color: #fff;
+    margin-top: 25px;
+    font-family: sans-serif;
+    font-weight:400;
+    border-radius: 12px;
+    font-size: 17px;
+    thead {
+        margin-top: 20px;
+        tr {
+            th {
+                font-size: 15px;
+                text-align: end;
+                padding: 30px 20px 20px;
+                border-bottom: 1px solid #eff2f5;
+            }
+        }
+    }
+    tbody {
+        td {
+            padding: 15px 20px 15px;
+            text-align: end;
+        }
+        tr {
+            border-bottom: 01px solid #eff2f5;
+            &:hover {
+                background-color: #F8FAFD;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.text-table {
+    font-size: 16px;
+}
+// End Table list coin
+.coin h6:hover ~ .overlay  {
+   opacity: 1;
+}
+.table-trade select {
+    border-radius: 8px;
+    outline: 0px;
+    background-color: rgb(245, 249, 255) ;
+    color: rgb(106, 136, 245) ;
+    cursor: pointer;
+    padding: 12px 18px;
+    margin-right: 50px;
+    font-size: 17px;
+    border: 0;
+    option {
+        font-size: 20px;
+    }
+}
 .overlay {
     position: absolute;
     right: calc(100% + 1.5rem); 
@@ -73,7 +125,7 @@
     height: fit-content;
     box-shadow: rgb(0 0 0 / 8%) 0px 0px 8px, rgb(0 0 0 / 8%) 0px 4px 8px;
     padding: 8px;
-    top: 0px;
+    top: -33px;
     color: #fff;
     background-color: rgb(94, 102, 115);
     border-radius: 4px;
@@ -102,6 +154,23 @@
 @media screen and(max-width:1200px) {
     .overlay {
         display: none;
+    }
+}
+@media screen and(max-width:769px) {
+    .text-table {
+        display: none ;
+    }
+    .table-trade {
+         margin: 0 10px !important;
+    }
+    .pagination {
+        margin-top: 10px;
+        padding-left: 0 !important;
+        flex-wrap: wrap;
+        ul ,li {
+            margin:0px !important;
+            padding: 0 !important;
+        }
     }
     
 }

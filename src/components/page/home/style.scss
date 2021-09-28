@@ -2,18 +2,18 @@
     padding: 0 0 82px 80px;
     height: 100vh;
     .containerr {
-        padding: 35px 30px;
+        padding: 20px 30px;
         display: flex;
         &-left {
             width: 65%;
             .left-top-box {
                 display: flex;
-                margin-top: 45px;
+                margin-top: 20px;
                 .card {
                     border-radius: 14px;
                     margin-right: 20px;
                     cursor: pointer;
-                    padding: 30px 20px;
+                    padding: 27px 20px;
                     border: 0;
                     background-color: #ffffff;
                     &-header {
@@ -45,9 +45,10 @@
                     }
                     &-text {
                         color: rgb(61, 59, 59);
-                        margin-top: 20px;
+                        margin-top: 17px;
                         font-size: 19px;
-                        font-weight: 600;
+                        font-weight: 500;
+                        line-height: 24px;
                     }
                 }
             }

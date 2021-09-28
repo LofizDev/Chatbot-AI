@@ -1,5 +1,5 @@
 import React ,{useState,useEffect} from 'react'
-import Today from '../../dateToday/Today'
+import  {getCurrentDate}  from '../../../../../utils/DataFormatter'
 import './BoxInfoStyle.scss'
 function BoxInfo() {
 
@@ -32,6 +32,7 @@ function BoxInfo() {
             setWeather(data)
         })
     }, [])
+    
     return (
         <div className='sibar-weather'>
             <div className="box-detail"
@@ -53,7 +54,7 @@ function BoxInfo() {
                         {weather.name}
                     </div>
                     <div className="date">
-                        <Today />
+                        <p style={{letterSpacing:'.8px'}} >{getCurrentDate()}</p>
                     </div>
                 </div>
                 {/* weather box */}

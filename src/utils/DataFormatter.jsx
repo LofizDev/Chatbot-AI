@@ -1,3 +1,14 @@
+// Current Date of the Weather
+export function getCurrentDate() {
+    let today = new Date();
+    const dd = String(today.getDate()).padStart(2, );
+    const months = new Array('Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12')
+    const curMonth = months[today.getMonth()]
+    today =  dd +' ' + curMonth +', 2021'
+    return today
+}
+
+// TimeSince of The News
 export function timeSince(date) {
     let seconds = Math.floor((Number(Date.now()) - Number(date) * 1000) / 1000);
     let interval = seconds / 31536000;
@@ -24,3 +35,5 @@ export function timeSince(date) {
     return Math.floor(seconds) + " giây";
 }
 
+
+  

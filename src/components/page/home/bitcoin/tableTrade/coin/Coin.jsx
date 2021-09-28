@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../style.scss'
 import moment from "moment";
 function Coin({ trades }) {
@@ -17,7 +16,7 @@ function Coin({ trades }) {
   return (
     <>
       {trades.map((item, index) => (
-        <div className='coin'>
+        <div key={index} className='coin'>
           <h6 className={`pri-coin ${handleCompare(item.p,
             trades[index + 1] && trades[index + 1].p
           )}`} >

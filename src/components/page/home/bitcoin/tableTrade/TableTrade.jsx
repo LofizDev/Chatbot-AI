@@ -1,29 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Newspaper } from 'react-bootstrap-icons';
 import Coin from './coin/Coin';
 import '../style.scss'
-// import Chart from './components/Chart/Chart';
-// import Table from './components/Table/Table';
-// import Dropdown from './components/Dropdown/Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 const URL_WEB_SOCKET = 'wss://stream.binance.com:9443/ws';
 
-const Bitcoin = () => {
+const TableTrade = () => {
   const [ws, setWs] = useState(null);
   const [trades, setTrades] = useState([]);
-  const [sortedTrades, setSortedTrades] = useState([]);
-  const [currentCoin, setCurrentCoin] = useState('ethusdt');
+  const [currentCoin, setCurrentCoin] = useState('btcusdt');
   const prevCoin = useRef(currentCoin);
+
 
   // Connect, disconnect Socket
   useEffect(() => {
     const webSocketClient = {
       wsClient: new WebSocket(URL_WEB_SOCKET),
       connect: function () {
-        // if connect succesfully then open websocket can request, response data
         this.wsClient.onopen = () => {
           setWs(webSocketClient.wsClient);
         };
-        // when socket closed, server will be notification disconnect,and affter 5s auto connect
         this.wsClient.onclose = () => {
           console.log('disconnect');
           setTimeout(function () {
@@ -68,19 +63,6 @@ const Bitcoin = () => {
     prevCoin.current = currentCoin;
   }, [currentCoin]);
 
-  // useEffect(() => {
-  //   const mapedTrades = trades.map((trade, index) => {
-  //     return {
-  //       ...trade,
-  //       index: index,
-  //     };
-  //   });
-  //   const sortTrades = mapedTrades.sort((a, b) => {
-  //     return b.index - a.index;
-  //   });
-  //   setSortedTrades(sortTrades);
-  // }, [trades]);
-
   useEffect(() => {
     if (ws) {
       ws.onmessage = (e) => {
@@ -90,6 +72,8 @@ const Bitcoin = () => {
       };
     }
   }, [ws, trades]);
+  
+
 
   const addTradeToList = (trade, newTrades) => {
     if (trade.e) {
@@ -104,19 +88,26 @@ const Bitcoin = () => {
     }
   };
 
+  const handleChangeCoin = (coinCode) => {
+    setCurrentCoin(coinCode)
+  }
+
 
   return (
     <div className='table-trade'>
-      <h6 className="coin-title">Số lệnh</h6>
+      <div className="select-coin" style={{display:'flex', justifyContent:'space-between',alignItems:"end"}}>
+      <h6 className="coin-title" >Số lệnh</h6>
+      <Dropdown handleChangeCoin={handleChangeCoin}/>
+      </div>
       <div className="coin-name">
         <p id='price-coin'>Giá (USDT)</p>
         <p id='quantity-coin'>Số lượng (Coin)</p>
         <p id='total-coin'>Thời gian</p>
       </div>
       <div className="coin-detail">
-          <Coin trades={trades}  />
+        <Coin trades={trades} />
       </div>
     </div>
   );
 };
-export default Bitcoin;
+export default TableTrade;
