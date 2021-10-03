@@ -3,7 +3,7 @@ import { CaretDownFill, CaretUpFill } from 'react-bootstrap-icons'
 function Coin({ coinmarketcap, loading }) {
 
     if(loading) {
-        return <h2>Loading...</h2>
+        return <>Loading...</>
     }
     return (
         <>

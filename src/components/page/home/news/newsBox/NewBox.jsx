@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import './style.scss'
 import { jumbotron } from 'bootstrap-css'
 import Chart from '../chartVN/Chart'
+import { COVID_CASES_VIETNAM } from '../../../../../utils/Api'
+import ChartVaccince from '../chartVN/ChartVaccince'
 
 
 function NewBox() {
@@ -10,7 +12,7 @@ function NewBox() {
     const [vietNamCases,setVietNamCases] = useState([])
 
     useEffect(() => {
-        fetch('https://api.zingnews.vn/public/v2/corona/getChart')
+        fetch(COVID_CASES_VIETNAM)
         .then(res => res.json())
         .then(data => {
             const vietNamCases = data.data.vnSeason4CommunityDaily.data 
@@ -49,6 +51,7 @@ function NewBox() {
             </div>
             <div className="chart-cases">
                 <Chart/>
+                <ChartVaccince/>
             </div>
         </div>
     ) 

@@ -3,13 +3,18 @@ import React, { useState, useEffect } from 'react'
 import Pagination from './Pagination/Pagination'
 import { CRYPTO_LIST_COIN } from '../../../../utils/Api'
 import Coin from './Coin/Coin'
-
 function TableCoin() {
   const [coinmarketcap, setCoinmarketcap] = useState([])
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage, setPostsPerPage] = useState(10)
-
+  const [postsPerPage] = useState(10)
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPost = coinmarketcap.slice(indexOfFirstPost, indexOfLastPost)
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  
 
   // Call api and fetch list Coinmarketcap
   useEffect(() => {
@@ -22,14 +27,6 @@ function TableCoin() {
 
     fetchListCoin()
   }, [])
-
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage
-  const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPost = coinmarketcap.slice(indexOfFirstPost, indexOfLastPost)
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
     <div className="crypto-tablelist">

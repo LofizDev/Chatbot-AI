@@ -104,6 +104,19 @@
         font-size: 18px;
     }
 }
+.btn-group label {
+    font-size: 14px;
+    padding: 13px 22px;
+    color: #58667e ;
+    background-color: #eff2f5;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    user-select: none;
+    cursor: pointer;
+}
+.btn-group .atv {
+    background-color: #fff;
+}
 .highcharts-title,.highcharts-credits{
     display: none ;
 }

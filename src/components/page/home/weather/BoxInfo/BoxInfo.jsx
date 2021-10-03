@@ -1,4 +1,5 @@
 import React ,{useState,useEffect} from 'react'
+import { API_BASE_WEATHER, API_KEY_WEATHER } from '../../../../../utils/Api'
 import  {getCurrentDate}  from '../../../../../utils/DataFormatter'
 import './BoxInfoStyle.scss'
 function BoxInfo() {
@@ -8,8 +9,8 @@ function BoxInfo() {
 
     // key and url of api weather
     const api = {
-        key:'acc4a289ac1bba6d85927937c13007e3',
-        base: 'https://api.openweathermap.org/data/2.5/'
+        key: API_KEY_WEATHER,
+        base: API_BASE_WEATHER
     }
 
     // Search and fetch Api

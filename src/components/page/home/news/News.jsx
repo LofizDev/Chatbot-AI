@@ -14,14 +14,19 @@ function News() {
     useEffect(() => {
         setLoading(true)
         const getNews = async () => {
-            await fetch(NEWS_VNEXPRESS)
-                .then(res => res.json())
-                .then(data => {
-                    const keyId = Object.keys(data.data)[0]
-                    setNewsData(data.data[keyId].data)
-                    setLoading(false)
-                })
-            setLoading(false)
+            try {
+                await fetch(NEWS_VNEXPRESS)
+                    .then(res => res.json())
+                    .then(data => {
+                        const keyId = Object.keys(data.data)[0]
+                        setNewsData(data.data[keyId].data)
+                        setLoading(false)
+                    })
+                setLoading(false)
+            } 
+            catch (error) {
+                console.log(error);
+            }
         }
         getNews()
     }, [])
@@ -52,16 +57,16 @@ function News() {
         <div className="news-sidebar" style={{ marginTop: '65px', }}>
             <ul className='list-news'>
                 {newsData.slice(0, page).map((item, index) => (
-                    <a key={index} href={item.share_url}>
+                    <a key={index} href={item?.share_url}>
                         <div className="card mb-3" style={{ border: '0' }} >
                             <div className="row no-gutters">
                                 <div className="col-md-3 news-img">
-                                    <img src={item.thumbnail_url} alt="news" />
+                                    <img src={item?.thumbnail_url} alt="news" />
                                 </div>
                                 <div className="col-md-9 news-content it">
                                     <div className="card-body">
-                                        <h5 className="card-title">{item.title}</h5>
-                                        <h6 className="card-text">{item.lead}</h6>
+                                        <h5 className="card-title">{item?.title}</h5>
+                                        <h6 className="card-text">{item?.lead}</h6>
                                     </div>
                                     <div className="card-fotterr">
                                         <p className='time-news'> {timeSince(item?.publish_time)}  trước</p>

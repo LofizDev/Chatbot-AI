@@ -30,3 +30,17 @@ p {
 .highcharts-root {
     font-family: sans-serif !important;
 }
+tspan {
+    font-size: 13px;
+}
+.recharts-legend-item-text,.recharts-default-legend {
+    display: none;
+}
+.recharts-tooltip-wrapper  {
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+}
+.recharts-tooltip-item-list {
+    margin-top: 20px !important;
+}
