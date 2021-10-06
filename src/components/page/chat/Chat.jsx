@@ -49,7 +49,6 @@ function Chat() {
         scrollToBottom()
     })
 
-
     return (
         <div className='team chat-app'>
             <div className="chat-container">
@@ -84,7 +83,7 @@ function Chat() {
                         </div>
                     )} 
         
-                    {/* Box CHat */}
+                    {/* Box Chat */}
                     { myMessage && (
                     <div className="box-chat">
                         {boxChat.slice(1,).map((item) => (
