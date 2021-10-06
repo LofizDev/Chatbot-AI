@@ -12,3 +12,5 @@ export const API_BASE_WEATHER =
 'https://api.openweathermap.org/data/2.5/'
 export const COVID_VACCINE_VIETNAM = 
 'https://api.zingnews.vn/public/v2/corona/getChart?type=vaccination'
+export const API_CHATBOT =
+'https://api.monkedev.com/fun/chat?msg='
