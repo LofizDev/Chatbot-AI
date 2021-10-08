@@ -77,7 +77,7 @@ const TableTrade = () => {
 
   const addTradeToList = (trade, newTrades) => {
     if (trade.e) {
-      if (newTrades.length >= 15) {
+      if (newTrades.length >= 20) {
         newTrades.shift();
         newTrades.push(trade);
         setTrades(newTrades);

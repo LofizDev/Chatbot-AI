@@ -113,7 +113,7 @@ function Chat() {
                         value={query}
                         onKeyPress={sendMessage}
                         placeholder='Send a message' />
-                    <button>Send</button>
+                    <button onClick={sendMessage}>Send</button>
                 </div>
             </div>
         </div>
