@@ -1,6 +1,6 @@
 # Chatbot AI With ReactJS SocketIO
 
-#Feature: 
+# Feature: 
          + Voice assistant
          + Realtime price coin, change select coin. pagination table coin
          + Weather forecast, See specific weather through each city.
