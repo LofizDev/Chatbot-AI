@@ -21,6 +21,6 @@ https://chatbot-ai.vercel.app/
   </div> -->
   ![](https://f48-zpg.zdn.vn/9098406238814028013/d62affbd448e8dd0d49f.jpg)
   ![](https://f18-zpg.zdn.vn/3415989473256219068/74446eb1f5823cdc6593.jpg)
-  ![](https://f41-zpg.zdn.vn/7556805453722295436/ad50ec9778a4b1fae8b5.jpg)
+  ![image](https://user-images.githubusercontent.com/86564838/136584782-1a89626c-531f-453b-995f-b0de458a07f0.png)
   ![](https://f36-zpg.zdn.vn/7154961446384074278/a4808fe630d5f98ba0c4.jpg)
 
