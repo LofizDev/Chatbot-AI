@@ -84,7 +84,7 @@ function Home() {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            <Card onClick={() => setVoiceData(<Music />)}
+                            {/* <Card onClick={() => setVoiceData(<Music />)}
                                 className='card-item' style={{ width: '18rem' }}>
                                 <Card.Header className='back-icon'>
                                     <MusicNoteBeamed size={19} />
@@ -95,7 +95,7 @@ function Home() {
                                         Try saying :  Music
                                     </Card.Text>
                                 </Card.Body>
-                            </Card>
+                            </Card> */}
                         </div>
                     </div>
                     {/* Chart left box */}

@@ -31,18 +31,6 @@ function SideBar() {
                                 <p></p>
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to='/Todos'>
-                                <span className='icon-bar'><Check2Square /></span>
-                                <p></p>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/Check'>
-                                <span className='icon-bar'><HddNetwork /></span>
-                                <p></p>
-                            </NavLink>
-                        </li>
                     </ul>
                 </div>
                 <div className="sidebar__wrapper-bottom">

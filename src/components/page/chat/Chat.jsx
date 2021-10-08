@@ -29,17 +29,17 @@ function Chat() {
 
 
     // Get data when typing text
-    const sendMessage = async (e) => {
-        if (e.key === 'Enter') {
-            await fetch(`${API_CHATBOT}${query}`)
-                .then(res => res.json())
-                .then(data => {
-                    setBotMessage(data)
-                    setQuery('')
-                    setMyMessage(query)
-                })
+        const sendMessage = async (e) => {
+            if (e.key === 'Enter') {
+                await fetch(`${API_CHATBOT}${query}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        setBotMessage(data)
+                        setQuery('')
+                        setMyMessage(query)
+                    })
+            }
         }
-    }
 
     // Scroll botom when new message
     const scrollToBottom = () => {
