@@ -79,8 +79,8 @@ function ChartVaccince() {
           <YAxis />
           <Tooltip />
           {/* <Legend /> */}
-          <Bar dataKey="Mũi tiêm thứ 1:" fill="#9B8ADF" background={{ fill: '#eee' }} />
-          <Bar dataKey="Mũi tiêm thứ 2:" fill="#7FD0D6" />
+          <Bar dataKey="Mũi tiêm thứ 1:" fill="#9B8ADF" background={{ fill: '#9B8ADF' }} />
+          <Bar dataKey="Mũi tiêm thứ 2:" fill="#7FD0D6" background={{ fill: '#7FD0D6' }} />
         </BarChart>
       </ResponsiveContainer>
             <div className="btn-group mt-3">
