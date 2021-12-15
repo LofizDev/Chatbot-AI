@@ -1,12 +1,12 @@
 # Chatbot AI With ReactJS SocketIO
 
 # Features: 
-         + Voice assistant
-         + Realtime price coin, change select coin. pagination table coin
-         + Weather forecast, See specific weather through each city.
-         + Total cases, deaths, recorved, Chart covid 19 VietNam, daily vaccination.
-         + Vietnam's latest news.
-         + Chatbot AI.
+     + Voice assistant
+     + Real-time price coin, change select coin. pagination table coin
+     + Weather forecast, See specific weather through each city.
+     + Total cases, deaths, recorded, Chart covid 19 VietNam, daily      vaccination.
+     + Vietnam's latest news.
+     + Chatbot AI.
          
 
 
